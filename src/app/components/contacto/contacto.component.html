@@ -3,20 +3,24 @@
       <h3 class="block-title">Contact</h3>
       <div class="row">
           <div class="col-md-6">
-              <form class="contact-form" action="/src/assets/php/send_mail.php" method="post" id="contact_form">
+              <form class="contact-form" id="contact_form"> <!-- action="/src/assets/php/send_mail.php" method="post"  -->
                   <div class="form-control-wrap">
                       <div id="message" class="alert alert-danger alert-dismissible fade"></div>
                       <div class="form-group">
-                          <input type="text" class="form-control" id="fname" placeholder="Nombre*" name="fname">
+                          <!--input type="text" class="form-control" id="fname" placeholder="Nombre*" name="fname" -->
+                          <input type="text" class="form-control" id="fname" placeholder="Nombre*" [(ngModel)]="dataset.fname" name="fname">
                       </div>
                       <div class="form-group mar-top-40">
-                          <input type="email" class="form-control" id="email" placeholder="Correo Electronico*" name="email">
+                        <input type="email" class="form-control" id="email" placeholder="Correo Electronico*" [(ngModel)]="dataset.email" name="email">
+                        <!--input type="email" class="form-control" id="email" placeholder="Correo Electronico*" name="email"-->
                       </div>
                       <div class="form-group mar-top-60">
-                          <textarea class="form-control" rows="10" name="comment" id="comment" placeholder="Su Mensaje"></textarea>
+                        <!--input type="text" [(ngModel)]="dataset.comment" name="comment" -->
+                        <textarea class="form-control" rows="10" id="comment" placeholder="Su Mensaje" [(ngModel)]="dataset.comment" name="comment"></textarea>
                       </div>
                       <div class="form-group mar-top-40">
-                          <button type="submit" class="btn v7">SEND MESSAGE</button>
+                          <!--button-- type="submit" class="btn v7">SEND MESSAGE</!--button-->
+                          <button (click)="onSubmit()" type="submit" class="btn v7">SEND MESSAGE</button>
                       </div>
                   </div>
               </form>
@@ -47,7 +51,7 @@
                   </div>
                   <div class="contact-details">
                       <h5>e-Mail</h5>
-                      <p>ahowtech@gmail.com</p>
+                      <p>ahowtech2022@gmail.com</p>
                   </div>
               </div>
           </div>
