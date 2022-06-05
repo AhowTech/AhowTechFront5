@@ -1,0 +1,36 @@
+$font-titulos1: 'Titillium Bold', sans-serif;
+$fondo1:black;
+$fondo2:rgba(243, 240, 240, 0.952);
+$font-color1:white;
+
+.font1{
+  font-family: $font-titulos1;
+  font-size: 40px;
+  transition: {
+    property: font-size;
+    duration: 4s;
+    delay: 2s;
+  }
+
+  &:hover { font-size: 36px; }
+}
+.fondo1{
+  background-color: $fondo1;
+}
+.fondo2{
+  background-color: $fondo2;
+}
+.letrafondo1{
+  color:$font-color1;
+}
+.letrafondo2{
+  color:$font-color1;
+  font-style: italic;
+}
+ul,ol,dl,p {
+  font-size: 1.25rem;
+}
+
+li, p {
+  line-height: 1.5;
+}
