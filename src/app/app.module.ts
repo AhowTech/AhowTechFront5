@@ -11,6 +11,7 @@ import { ContactoComponent } from './components/contacto/contacto.component';
 import { PortafolioComponent } from './components/portafolio/portafolio.component';
 import { ResumenComponent } from './components/resumen/resumen.component';
 import { PortafoliocarruselComponent } from './components/portafoliocarrusel/portafoliocarrusel.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { PortafoliocarruselComponent } from './components/portafoliocarrusel/por
     ContactoComponent,
     PortafolioComponent,
     ResumenComponent,
-    PortafoliocarruselComponent
+    PortafoliocarruselComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

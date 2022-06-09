@@ -12,75 +12,109 @@
     <li id="close" class="menu-item"><i class="ion-ios-close-empty"></i></li>
   </ul>
 </div>
-<section class="home">
-  <div class="bgScroll"></div>
-  <div class="overlay opacity7"></div>
-  <div class="container">
+<div class="total1">
+  <section class="home">
+    <div class="bgScroll"></div>
+    <div class="overlay opacity7"></div>
+    <div class="container">
 
-    <div class="name-block">
-      <div class="name-block-container">
-        <a class="navbar-brand font-weight-bold" href="../index.html">
-          <img src="../assets/img/logos/Emblema_AhohTech.jpg" alt="Ahow_Technology" style="width:45%; height:45%;">
-        </a>
-        <!--h1>AHOW TECH</!--h1-->
-        <span class="color-frase1">“Where <span class="span12">SERVICE</span> is everything, <br /> <span class="span11">SAFETY</span> comes
-          First”</span><br> ************************** <br>
-        <h2><span class="span12">“All our equipments are Manufactured with <span class="span12">ENVIROMENTALLY
-              FRIENDLY PROUCTS"</span></span></h2>
-        <a target="_blank" href="../../../assets/docs/EDWIN  AHOW PENETRATOR DATA SHEET_v02.pdf"
-          class="btn btn-download">DOWNLOAD BROCHURE</a>
+      <div class="name-block">
+        <div class="name-block-container">
+          <div class="row">
+            <a class="navbar-brand font-weight-bold" href="../index.html">
+              <img src="../assets/img/logos/Emblema_AhohTech.jpg" alt="Ahow_Technology"
+                style="width:208px; height:53px;">
+            </a>
+          </div>
 
-        <ul class="social">
-          <li><a target="_blank" href="https://www.facebook.com/"><i class="ion-social-facebook"></i></a></li>
-          <li><a target="_blank" href="https://www.linkedin.com/"><i class="ion-social-linkedin"></i></a></li>
-          <li><a target="_blank" href="https://github.com/"><i class="ion-social-github"></i></a></li>
-          <li><a target="_blank" href="https://www.youtube.com/"><i class="ion-social-youtube"></i></a></li>
-          <li><a target="_blank" href="https://wa.me/"><i class="ion-social-whatsapp"></i></a></li>
-          <li><a target="_blank" href="https://www.pinterest.com/"><i class="ion-social-pinterest"></i></a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="menu-blocks">
-      <div class="about-block menu-block">
-        <div class="about-block-container">
-          <h2 class="about menu-item">Home</h2>
+          <div class="row">
+            <!--h1>AHOW TECH</!--h1-->
+            <span class="color-frase1">“Where <span class="span12">SERVICE</span> is everything, <br /> <span
+                class="span11">SAFETY</span> comes
+              First”</span><br>
+            <h5 style="color:white;">**************************</h5>
+            <h2><span class="span12">“All our equipments are Manufactured with <span class="span12">ENVIROMENTALLY
+                  FRIENDLY PROUCTS"</span></span></h2>
+          </div>
+
+          <div class="row">
+            <a target="_blank" href="../../../assets/docs/EDWIN  AHOW PENETRATOR DATA SHEET_v02.pdf"
+              class="btn text-light">DOWNLOAD BROCHURE<i class="fa-solid fa-cloud-arrow-down"></i></a>
+          </div>
+
+          <div class="row">
+            <ul class="social">
+              <li><a target="_blank" href="https://www.facebook.com/"><i class="ion-social-facebook"></i></a></li>
+              <li><a target="_blank" href="https://www.linkedin.com/"><i class="ion-social-linkedin"></i></a></li>
+              <li><a target="_blank" href="https://github.com/"><i class="ion-social-github"></i></a></li>
+              <li><a target="_blank" href="https://www.youtube.com/"><i class="ion-social-youtube"></i></a></li>
+              <li><a target="_blank" href="https://wa.me/"><i class="ion-social-whatsapp"></i></a></li>
+              <li><a target="_blank" href="https://www.pinterest.com/"><i class="ion-social-pinterest"></i></a></li>
+            </ul>
+          </div>
         </div>
       </div>
-      <div class="portfolio-block  menu-block">
-        <div class="portfolio-block-container">
-          <h2 class="portfolio menu-item">Products</h2>
+
+
+
+
+      <div class="menu-blocks">
+        <div class="about-block menu-block">
+          <div class="about-block-container">
+            <h2 class="about menu-item">Home</h2>
+          </div>
+        </div>
+        <div class="portfolio-block  menu-block">
+          <div class="portfolio-block-container">
+            <h2 class="portfolio menu-item">Products</h2>
+          </div>
+        </div>
+        <div class="blog-block  menu-block">
+          <div class="blog-block-container">
+            <h2 class="blog menu-item">Services</h2>
+          </div>
+        </div>
+        <div class="contact-block  menu-block">
+          <div class="contact-block-container">
+            <h2 class="contact menu-item">Contact</h2>
+          </div>
+        </div>
+
+      </div>
+
+
+
+      <div class="content-blocks about">
+        <app-resumen></app-resumen>
+      </div>
+
+      <div class="content-blocks portfolio">
+        <app-portafoliocarrusel></app-portafoliocarrusel>
+      </div>
+      <div class="content-blocks blog">
+        <app-blog></app-blog>
+      </div>
+      <div class="content-blocks contact">
+        <app-contacto></app-contacto>
+      </div>
+      <!-- <div class="content-blocks footer">
+      <app-footer></app-footer>
+    </div> -->
+
+
+      <div class="content-blocks pop">
+        <div id="close-pop" class="close-pop">Cerrar <i class="ion-ios-close-empty"></i></div>
+        <section class="content"></section>
+      </div>
+    </div>
+  </section>
+  <section class="relative-bottom footer">
+    <div>
+      <div>
+        <div>
+          <app-footer></app-footer>
         </div>
       </div>
-      <div class="blog-block  menu-block">
-        <div class="blog-block-container">
-          <h2 class="blog menu-item">Services</h2>
-        </div>
-      </div>
-      <div class="contact-block  menu-block">
-        <div class="contact-block-container">
-          <h2 class="contact menu-item">Contact</h2>
-        </div>
-      </div>
     </div>
-
-    <div class="content-blocks about">
-      <app-resumen></app-resumen>
-    </div>
-
-    <div class="content-blocks portfolio">
-      <app-portafoliocarrusel></app-portafoliocarrusel>
-    </div>
-    <div class="content-blocks blog">
-      <app-blog></app-blog>
-    </div>
-    <div class="content-blocks contact">
-      <app-contacto></app-contacto>
-    </div>
-
-    <div class="content-blocks pop">
-      <div id="close-pop" class="close-pop">Cerrar <i class="ion-ios-close-empty"></i></div>
-      <section class="content"></section>
-    </div>
-
-  </div>
-</section>
+  </section>
+</div>
