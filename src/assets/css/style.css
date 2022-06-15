@@ -372,11 +372,12 @@ a:not([href]):not([tabindex]) {
 .total1{
   width: 100%;
   height:100vh;
+  top:0;
 }
 
 .home {
   width: 100%;
-  height: 95%;
+  height: 100%;
   position: relative;
   overflow: hidden;
   background-size: cover;
@@ -2166,7 +2167,7 @@ h4.package {
 
 .footer {
   width: 100%;
-  height: 5%;
+  /* height: 10%; */
   position: absolute;
   overflow: hidden;
   background-size: cover;
@@ -3027,16 +3028,16 @@ h4.package {
 
 /*!    ******* Inicio --- CSS del Titulo Inicial   *****   */
 .color-frase1 {
-  color: rgb(0, 255, 242);
+  color: #3efaf1;
   font-size: 25px;
 }
 .span11 {
-  color: coral;
+  color: #ff0000;
   font-size: 25px;
   font-weight: bold;
 }
 .span12 {
-  color: rgb(32, 235, 32);
+  color: #00ff00;
   font-size: 25px;
   font-weight: bold;
 }
@@ -3046,6 +3047,9 @@ h4.package {
 }
 .imgtit1 {
   align-items: flex-end;
+}
+.fondo10{
+ background-image:url("../img/Wallpaper23.png");
 }
 
 /*!    *******  Fin  ---   CSS del Titulo Inicial   *****   */

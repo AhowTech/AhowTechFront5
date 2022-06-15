@@ -8,19 +8,19 @@
                       <div id="message" class="alert alert-danger alert-dismissible fade"></div>
                       <div class="form-group">
                           <!--input type="text" class="form-control" id="fname" placeholder="Nombre*" name="fname" -->
-                          <input type="text" class="form-control" id="fname" placeholder="Nombre*" [(ngModel)]="dataset.fname" name="fname">
+                          <input type="text" class="form-control" id="fname" placeholder="Full name*" [(ngModel)]="dataset.fname" name="fname">
                       </div>
                       <div class="form-group mar-top-40">
-                        <input type="email" class="form-control" id="email" placeholder="Correo Electronico*" [(ngModel)]="dataset.email" name="email">
+                        <input type="email" class="form-control" id="email" placeholder="e-Mail*" [(ngModel)]="dataset.email" name="email">
                         <!--input type="email" class="form-control" id="email" placeholder="Correo Electronico*" name="email"-->
                       </div>
                       <div class="form-group mar-top-60">
                         <!--input type="text" [(ngModel)]="dataset.comment" name="comment" -->
-                        <textarea class="form-control" rows="10" id="comment" placeholder="Su Mensaje" [(ngModel)]="dataset.comment" name="comment"></textarea>
+                        <textarea class="form-control" rows="8" id="comment" placeholder="Your message" [(ngModel)]="dataset.comment" name="comment"></textarea>
                       </div>
                       <div class="form-group mar-top-40">
                           <!--button-- type="submit" class="btn v7">SEND MESSAGE</!--button-->
-                          <button (click)="onSubmit()"  class="btn v7">SEND MESSAGE</button>
+                          <button (click)="onSubmit()"  class="btn v7" style="background-color: aquamarine;">SEND MESSAGE</button>
                       </div>
                   </div>
               </form>
@@ -41,7 +41,7 @@
                       <i class="ion-ios-telephone-outline"></i>
                   </div>
                   <div class="contact-details">
-                      <h5>Telefono</h5>
+                      <h5>Phone</h5>
                       <p> <a href="tel:+1123456789">+1 - 123 456 789</a></p>
                   </div>
               </div>
