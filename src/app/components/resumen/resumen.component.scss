@@ -1,4 +1,5 @@
-$font-titulos1: 'Titillium Bold', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+$font-titulos1: 'Montserrat', sans-serif;
 $fondo1:rgba(14, 109, 126, 1.8);
 $fondo2:rgba(243, 240, 240, 0.952);
 $font-color1:white;
@@ -33,4 +34,16 @@ ul,ol,dl,p {
 
 li, p {
   line-height: 1.5;
+}
+// Transiciones
+.cuadro1{
+  width: 100px;
+  height: 100px;
+  background: rgb(255, 255, 255);
+  transition: width 2s, height 2s, transform 2s;
+}
+.cuadro1:hover{
+  width: auto;
+  height: 300px;
+  transform: rotate(360deg);
 }
