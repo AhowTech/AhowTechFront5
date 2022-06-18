@@ -74,16 +74,18 @@
 
         <div class="container-box">
 
-          <a href="#">
+          <a href="#" data-bs-toggle="modal" data-bs-target="#conectorModal">
               <div class="box box1">
 
-                  <i class="fas fa-image icon icon"></i>
-                  <h4 class="title">Imágenes</h4>
+                <i class=""><img class="icon" src="../../../assets/iconos/Conectors3.jpg" style="width:25%; height:25%;" alt="Presion"></i>
+                  <h4 class="title">Conectors</h4>
                   <p>Lorem ipsum dolor sit amet consectetur.</p>
                   <div class="background-hover"></div>
 
               </div>
           </a>
+
+
 
           <a href="#">
               <div class="box box2">
@@ -172,6 +174,9 @@
     </section>
   </div>
 
+
+
+
   <!-- <div class="bg-primary-gradient bg-lines-04">
     <div class="container-flex">
       <div class="text-center py-2">
@@ -205,3 +210,25 @@
     </section>
   </div>
 </main>
+<!--   Modals   -->
+<div style="z-index: 1030;">
+<div class="modal fade" id="conectorModal" tabindex="-1" aria-hidden="true" aria-labelledby="modalTitle" data-bs-backdrop="false">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" style="width:500px; height: 500px;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalTitle">Conectors</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p><i class="ion-ios-checkmark"></i>Lower feedthrough connector is 316 SS NACE MR 0175. <br> Environment
+          conditions: Concentration 100% CO2 gas or liquid and 65,000 PPM H2S. <br>(Other metallurgies available
+          upon request); upper connector is cast aluminum. </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <!--button type="button" class="btn btn-primary">Save changes</!--button-->
+      </div>
+    </div>
+  </div>
+</div>
+</div>
