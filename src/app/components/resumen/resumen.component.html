@@ -134,13 +134,13 @@
             </div>
           </a>
 
-          <a href="#">
+          <a href="#" data-bs-toggle="modal" data-bs-target="#presionModal">
             <div class="box box6">
 
               <i class=""><img class="icon" src="../../../assets/iconos/Presion2.png" style="width:25%; height:25%;"
                   alt="Presion"></i>
               <h4 class="title">Pressure</h4>
-              <p>Pressure rating is 5,000 PSI.</p>
+              <p>Pressure Rating</p>
               <div class="background-hover"></div>
 
             </div>
@@ -303,7 +303,7 @@
     </div>
   </div>
 
-  <div class="modal fade" id="electricalModal" tabindex="-1" aria-hidden="true" aria-labelledby="modalTitle"
+  <div class="modal fade" id="junctionboxModal" tabindex="-1" aria-hidden="true" aria-labelledby="modalTitle"
     data-bs-backdrop="false">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" style="width:500px; height: 500px;">
       <div class="modal-content">
@@ -321,5 +321,27 @@
       </div>
     </div>
   </div>
+
+
+  <div class="modal fade" id="presionModal" tabindex="-1" aria-hidden="true" aria-labelledby="modalTitle"
+    data-bs-backdrop="false">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" style="width:500px; height: 500px;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalTitle">Pressure</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p><i class="ion-ios-checkmark"></i>Pressure rating is 5,000 PSI.</p>
+          <p><i class="ion-ios-checkmark"></i>POSITIVE MECHANICAL SEAL TESTED TO  5,000 psi.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <!--button type="button" class="btn btn-primary">Save changes</!--button-->
+        </div>
+      </div>
+    </div>
+  </div>
+
 
 </div>
