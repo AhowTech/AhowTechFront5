@@ -19,7 +19,7 @@ export class ContactoComponent implements OnInit {
   ngOnInit(): void {}
 
   onSubmit() {
-    console.log("Ando por aquí.....");
+   // console.log("Ando por aquí.....");
     this.service.enviarMail(this.dataset).subscribe(data=>{
       alert("Email Sent successfully...!!!")
      // this.router.navigate(["contacto"]);
