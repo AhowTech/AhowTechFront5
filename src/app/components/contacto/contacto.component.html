@@ -1,8 +1,8 @@
 <section class="content">
   <div class="block-content">
-      <h3 class="block-title">Contact</h3>
-      <div class="row">
-          <!-- <div class="col-md-6">
+    <h3 class="block-title">Contact</h3>
+    <div class="row">
+      <!-- <div class="col-md-6">
               <form class="contact-form" id="contact_form" #mailForm="ngForm"> < !-- action="/src/assets/php/send_mail.php" method="post"  -- >
                   <div class="form-control-wrap">
                       <div id="message" class="alert alert-danger alert-dismissible fade"></div>
@@ -25,62 +25,87 @@
                   </div>
               </form>
           </div> -->
-          <div class="col-md-6">
-            <form class="contact-form" id="contact_form" [formGroup]="datos"> <!-- action="/src/assets/php/send_mail.php" method="post"  -->
-                <div class="form-control-wrap">
-                    <div id="message" class="alert alert-danger alert-dismissible fade"></div>
-                    <div class="form-group">
-                        <!--input type="text" class="form-control" id="fname" placeholder="Nombre*" name="fname" -->
-                        <input type="text" class="form-control" id="fname" placeholder="Full name*" formControlName="fname">
-                    </div>
-                    <div class="form-group mar-top-40">
-                      <input type="email" class="form-control" id="email" placeholder="e-Mail*"  formControlName="email">
-                      <!--input type="email" class="form-control" id="email" placeholder="Correo Electronico*" name="email"-->
-                    </div>
-                    <div class="form-group mar-top-60">
-                      <!--input type="text" [(ngModel)]="dataset.comment" name="comment" -->
-                      <textarea class="form-control" rows="8" id="comment" placeholder="Your message" formControlName="comment"></textarea>
-                    </div>
-                    <div class="form-group mar-top-40">
-                        <!--button-- type="submit" class="btn v7">SEND MESSAGE</!--button-->
-                        <button (click)="envioCorreo()"  class="btn v7" style="background-color: aquamarine;">SEND MESSAGE</button>
-                    </div>
+      <div class="col-md-6">
+        <form class="contact-form" id="contact_form" [formGroup]="datos">
+          <!-- action="/src/assets/php/send_mail.php" method="post"  -->
+          <div class="form-control-wrap">
+            <div id="message" class="alert alert-danger alert-dismissible fade"></div>
+            <div class="form-group">
+              <!--input type="text" class="form-control" id="fname" placeholder="Nombre*" name="fname" -->
+              <input type="text" class="form-control" id="fname" placeholder="Full name*" formControlName="fname">
+              <div *ngIf="datos.controls.fname.errors && (datos.controls.fname.touched||datos.controls.fname.dirty)"
+                class="alert alert-danger">
+                The name is required.
+              </div>
+            </div>
+            <div class="form-group mar-top-40">
+              <input type="email" class="form-control" id="email" placeholder="e-Mail*" formControlName="email">
+              <!--input type="email" class="form-control" id="email" placeholder="Correo Electronico*" name="email"-->
+              <div *ngIf="datos.controls.email.errors && (datos.controls.email.touched||datos.controls.email.dirty)"
+                class="alert alert-danger">
+                The e-Mail is required -or- Email must be a valid email address.
+              </div>
+            </div>
+            <div class="form-group mar-top-60">
+              <!--input type="text" [(ngModel)]="dataset.comment" name="comment" -->
+              <textarea class="form-control" rows="8" id="comment" placeholder="Your message"
+                formControlName="comment" onKeyDown="valida_longitud()" onKeyUp="valida_longitud()"></textarea>
+              <div *ngIf="datos.controls.comment.errors && (datos.controls.comment.touched||datos.controls.comment.dirty)">
+                <div *ngIf="datos.controls.comment.errors.required"
+                class="alert alert-danger">
+                The comment is required.
                 </div>
-            </form>
-        </div>
-
-          <div class="col-md-5 offset-md-1">
-              <div class="contact-content">
-                  <div class="contact-icon">
-                      <i class="ion-ios-location-outline"></i>
-                  </div>
-                  <div class="contact-details">
-                      <h5>ADDRESS</h5>
-                      <p>7503 LONE STAR JUNCTION ST.
-                        RICHMOND, TEXAS, 77406 USA
-                        </p>
-                  </div>
+                <div *ngIf="datos.controls.comment.errors.minlength"
+                class="alert alert-danger">
+                The comment must have at least 10 characters.
+                </div>
+                <div *ngIf="datos.controls.comment.errors.maxlength"
+                class="alert alert-danger">
+                The comment must have 500 characters maximum.
+                </div>
               </div>
-              <div class="contact-content">
-                  <div class="contact-icon">
-                      <i class="ion-ios-telephone-outline"></i>
-                  </div>
-                  <div class="contact-details">
-                      <h5>Phone</h5>
-                      <p> +1 (713) 325 4705</p>
-                  </div>
-              </div>
-              <div class="contact-content">
-                  <div class="contact-icon">
-                      <i class="ion-ios-email-outline"></i>
-                  </div>
-                  <div class="contact-details">
-                      <h5>e-Mail</h5>
-                      <p>hector@ahowtech.com</p>
-                  </div>
-              </div>
+            </div>
+            <div class="form-group mar-top-40">
+              <!--button-- type="submit" class="btn v7">SEND MESSAGE</!--button-->
+              <button (click)="envioCorreo()" class="btn v7" style="background-color: aquamarine;"
+              [disabled]="!datos.valid"
+              >SEND MESSAGE</button>
+            </div>
           </div>
+        </form>
       </div>
+
+      <div class="col-md-5 offset-md-1">
+        <div class="contact-content">
+          <div class="contact-icon">
+            <i class="ion-ios-location-outline"></i>
+          </div>
+          <div class="contact-details">
+            <h5>ADDRESS</h5>
+            <p>7503 LONE STAR JUNCTION ST.
+              RICHMOND, TEXAS, 77406 USA
+            </p>
+          </div>
+        </div>
+        <div class="contact-content">
+          <div class="contact-icon">
+            <i class="ion-ios-telephone-outline"></i>
+          </div>
+          <div class="contact-details">
+            <h5>Phone</h5>
+            <p> +1 (713) 325 4705</p>
+          </div>
+        </div>
+        <div class="contact-content">
+          <div class="contact-icon">
+            <i class="ion-ios-email-outline"></i>
+          </div>
+          <div class="contact-details">
+            <h5>e-Mail</h5>
+            <p>hector@ahowtech.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
-
