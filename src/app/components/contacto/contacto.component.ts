@@ -15,7 +15,9 @@ const emailrevision = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".
 export class ContactoComponent implements OnInit {
   datos!: FormGroup;
   dataset: Details = new Details();
-
+  contador = 0;
+  maxlongi = 500;
+  contenido_textarea = "";
 
 
   constructor(private router:Router, private service:ServicesService, private httpcliente:HttpClient) {
@@ -65,29 +67,17 @@ export class ContactoComponent implements OnInit {
 
   }
 
-  valida_longitud(){
-    let contenido_textarea = "";
-    let num_caracteres_permitidos = 500;
-    let num_caracteres = document.forms[0].comment.value.length;
 
-   if (num_caracteres > num_caracteres_permitidos){
-      document.forms[0].comment.value = contenido_textarea
-   }else{
-      contenido_textarea = document.forms[0].comment.value
+  onKey(event:any){
+    this.contador = event.target.value.length;
+    if(this.contador > this.maxlongi){
+      event.target.value = this.contenido_textarea;
+      this.contador = event.target.value.length;
+    }else{
+      this.contenido_textarea = event.target.value;
+    }
+
    }
-
-   if (num_caracteres >= num_caracteres_permitidos){
-      document.forms[0].caracteres.style.color="#ff0000";
-   }else{
-      document.forms[0].caracteres.style.color="#000000";
-   }
-
-   this.cuenta();
-  }
-
-  cuenta(){
-    document.forms[0].caracteres.value=document.forms[0].comment.value.length
-  }
 
 
 }

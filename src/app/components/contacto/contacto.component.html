@@ -49,7 +49,8 @@
             <div class="form-group mar-top-60">
               <!--input type="text" [(ngModel)]="dataset.comment" name="comment" -->
               <textarea class="form-control" rows="8" id="comment" placeholder="Your message"
-                formControlName="comment" onKeyDown="valida_longitud()" onKeyUp="valida_longitud()"></textarea>
+                formControlName="comment" (keyup)="onKey($event)"></textarea>
+                <span>{{contador + " / " + maxlongi}}</span>
               <div *ngIf="datos.controls.comment.errors && (datos.controls.comment.touched||datos.controls.comment.dirty)">
                 <div *ngIf="datos.controls.comment.errors.required"
                 class="alert alert-danger">
