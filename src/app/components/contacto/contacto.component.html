@@ -2,29 +2,6 @@
   <div class="block-content">
     <h3 class="block-title">Contact</h3>
     <div class="row">
-      <!-- <div class="col-md-6">
-              <form class="contact-form" id="contact_form" #mailForm="ngForm"> < !-- action="/src/assets/php/send_mail.php" method="post"  -- >
-                  <div class="form-control-wrap">
-                      <div id="message" class="alert alert-danger alert-dismissible fade"></div>
-                      <div class="form-group">
-                          < !--input type="text" class="form-control" id="fname" placeholder="Nombre*" name="fname" -- >
-                          <input type="text" class="form-control" id="fname" placeholder="Full name*" [(ngModel)]="dataset.fname" name="fname">
-                      </div>
-                      <div class="form-group mar-top-40">
-                        <input type="email" class="form-control" id="email" placeholder="e-Mail*" [(ngModel)]="dataset.email" name="email">
-                        < !--input type="email" class="form-control" id="email" placeholder="Correo Electronico*" name="email"-- >
-                      </div>
-                      <div class="form-group mar-top-60">
-                        < !--input type="text" [(ngModel)]="dataset.comment" name="comment" -- >
-                        <textarea class="form-control" rows="8" id="comment" placeholder="Your message" [(ngModel)]="dataset.comment" name="comment"></textarea>
-                      </div>
-                      <div class="form-group mar-top-40">
-                          < !--button-- type="submit" class="btn v7">SEND MESSAGE</ >
-                          <button (click)="onSubmit()"  class="btn v7" style="background-color: aquamarine;">SEND MESSAGE</button>
-                      </div>
-                  </div>
-              </form>
-          </div> -->
       <div class="col-md-6">
         <form class="contact-form" id="contact_form" [formGroup]="datos">
           <!-- action="/src/assets/php/send_mail.php" method="post"  -->
