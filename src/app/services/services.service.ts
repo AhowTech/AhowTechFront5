@@ -16,7 +16,7 @@ export class ServicesService {
   Url1 = 'http://localhost:8080/testapp/getdetails';  // Para desarrollo
   Url2 = 'https://git.heroku.com/app-ahowtechwebb.git/testapp/getdetails';  // Para prod
   enviarMail(details: Details){
-    return this.http.post<Details>(this.Url2, details);
+    return this.http.post<Details>(this.Url1, details);
   }
 
   sendMenssage(body:any){
