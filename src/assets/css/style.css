@@ -871,6 +871,12 @@ h2.menu-item:after {
   height: auto;
   overflow: hidden;
 }
+.content10 {
+  position: relative;
+  padding: 60px 70px 30px;
+  height: auto;
+  overflow: hidden;
+}
 
 .content-blocks.pop {
   left: 100%;
@@ -3027,6 +3033,13 @@ h4.package {
 }
 
 /*!    ******* Inicio --- CSS del Titulo Inicial   *****   */
+
+.art23{
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+  color: #064699;
+  font-size: 25px;
+}
+
 .color-frase1 {
   color: #3efaf1;
   font-size: 25px;
